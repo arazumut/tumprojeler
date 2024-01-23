@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/><title>final çalışma</title>
+    
+    <body>
+/*<style type="text/css">
+    
+    body{padding: 0px; margin: 0px;}
+
+    div.konrollll{background-color: aqua; height: 300px; width: 100px;}
+
+    div.yapışkan{position: sticky; background-color: gold; height: 100px; width: 100px; top: 100px; left: 100px;}
+
+    /*Sticky kullanıcının kaydırma konumuna göre konumlandırma yapılabilmektedir*/
+    /*sticky yapışkan olarak adlandırılır*/
+
+    ul.i{list-style-type: circle;} /*boş daire madde işareti*/
+
+     ul.ii{list-style-type:square ;} /*kare olur*/ 
+
+    ol.i{list-style-type:lower-alpha;} /*büyük ascıı harfleri bildiğimiz harfler işte*/
+
+    .farklılık{color: red; text-decoration: line-through; text-transform: uppercase; font-style: uppercase; font-style: italic; border: 1px solid black; background-color: #99DDFF; padding: 10px;}
+
+    ol.ii{list-style-type: decimal-leading-zero;} /*sıfır ile başlayan ondalık sayılar */
+
+    ul{list-style-type:none ;} /*liste ögelerini işretlemez*/
+
+    ul.i{list-style-image:url(logo.png.png) ;}
+    ul.ic{list-style-position: inside;}/*madde işsretlerini içerde yapar*/
+
+     ul.dis{list-style-position: outside;}/*madde işretlerini dışarda yapar  */
+
+    ul{background: palegreen; padding: 20px;}
+
+    li{background: gray; padding: 5px; margin-left: 35px;}
+
+    li:hover{background: red;} /*lover == imleci onun üstüne getirdiğimizde olan etiket*/
+    /*hover == imleci koyulan yerin üstüne koyulduğunda istenilen rengi yapar*/
+    /*bu özellik sunada her yerde vardır koyduğumuz için*/
+
+    img{border: 1px solid black; border-radius: 20px;}/*eğer bir resim konulduğunda özelliklerinin nasıl olacağı belirlenir*/
+
+    img.bir{opacity: 0.3;} img.iki{opacity: 0.6;} img.üç{opacity: 1;}/*resmin opaklığını ayarlar*/
+
+    body{background-image: url();} /*arkaplana resim ekleme*/
+
+    h3{text-align: center; font-size: 30px; color: blue; font-weight: bold; padding: 30px; text-transform: uppercase;}
+
+    .ana{width: 800px; height: 600px; border: 1px solid black; background-color: aquamarine;}
+
+    .başlık{width: 780px; height: 100px; border: 1px solid black; margin: 10px; background-color: bisque;}
+
+    .icerik{width: 780px; height: 400px; border: 1px solid green; margin: 10px; background-color: gray;}
+
+    .hakkında{width: 780px; height: 50px; border: 1px solid black; margin: 10px; background-color: blue;}
+
+    div.kontrol{background-color: purple; height: 100px; width: 100px;}
+
+    div.statik{position: static; background-color: green; height: 10px; height: 100px;}
+
+    div.relative{position: relative; background-color: purple; height: 100px; width: 100px; top: -100px; left: 100px;}
+
+    div.göreceli{background-color: greenyellow; height: 100px; width: 100px;}
+
+    .table , th , td {border: 1px solid black;}
+    .p{border: 1px solid red; margin: 20px;}
+
+    div.kontroll{background-color: purple; height: 100px; width: 100px;}
+
+    div.sabit{position: fixed; background-color: green; height: 100px; width: 100px; top: 0px; right: 100px;}
+
+    div.kontolll{background-color: red; height: 100px; width: 100px;}
+
+ 
+    
+    /*statik: girilen şekli web sayfasına dikey olarak konumlamdırır
+
+                BORDER == TABLO KENAR ÖZELLİĞİNİN ALT ÖZELLİKLERİ
+
+    dotted == tabloda noktalı kenarlık tanımlar
+
+    table{border-collapse:collapse;} == tablonun kenar larını daraltır ve içindeki yazıya göre daraltır
+
+    td {padding:10px;} == padding == dolgu elementidir = etiketin içeriği ile sınıır arasındaki boşluktur
+
+    margin == padding kenar dolgunlukları iken margin ise kenar boşuklarıdır. 
+
+    dashed == tabloda kesikli kenarlık tanımlar
+
+    solid == kesintisiz kenarlık tanımlar
+
+    double == tabloda 2 kenarlık verir
+
+    groove == 3B oluklu kenarlığı tanımlar
+
+    inset == 3B metin kenarlığını tanımlar
+
+    outset == 3B başlangıc sınırını tanımlar
+
+    relative: girilen şekli web sayfasına yatay olarak konumlandırır.
+
+    Fixed: sayfa aşağı, yukarı veya yanlara doğru kaydırıldığında içeriğin her
+
+zaman görünür olmasını sağlamak için kullanılmaktadır. yani sabit olarak orada bulunur
+Absolute: içerik üst ögeye göre konumlandırılmaktadır Üst ögenin başlangıç
+noktasına (sol üst köşe) göre otomatik olarak yerleştirilmektedir
+    /*h3 e tanımlanan yazının nasıl olacapı belirlenir*/
+    div.kontolllll{background-color: red; height: 100px; width: 100px; position: relative; left: 100px; top: 60px; z-index: 6;}
+    div.ikinci{position: relative; background-color: aqua; height: 100px; width: 100px; top: -80px; left: 140px; z-index: 2;}
+    div.ücüncü{position: relative; background-color: blue; height: 100px; width: 100px; top: -160px; left: 140px; z-index: 4;}
+    /* z-index== Üst üste binen 2 veya daha fazla içerik olduğunda, üst üste binen içeriğin
+hangisinin üstte görüntüleneceğini tanımlamak için z index özelliği
+kullanılmaktadır*/
+h4{color: green;}
+
+
+
+</style>
+<table>
+    <tr><th>isim</th><th>soyisim</th><th>yaş</th></tr>
+    <tr><td>aziz</td><td>sancar</td><td>52</td></tr>
+    <tr><td><p class="p">ali</p><td>güneş</td><td>60</td></td></tr>
+</table>
+<ul class="ii">
+    <li>konya teknik ünervistesi</li>
+    <li>tbmyo</li>
+    <li>konya</li>
+</ul>
+<p>konya teknik üni , açık öğretim , <span class="farklılık">bilgisayar</span> programcılığı bölümü</p>
+<style>
+    body{background-color: blue;}
+</style>
+<ol class="ii">
+    <li>konya teknik üni</li>
+    <li>tbmyo</li>
+    <li>konya</li>
+</ol>
+<h3>konya teknik üniveristesi</h3>
+<ul>
+    <li>konya teknik üni</li>
+    <li>tbmyo</li>
+    <li>konya</li>
+</ul>
+<ul class="i">
+    <li>konya teknik üni</li>
+    <li>tbmyo</li>
+l    <i>konya</i>
+</ul>
+<ul class="ic">
+    <li>konya teknik üni</li>
+    <li>tbmyo</li>
+    <li>konya</li>
+</ul>
+<ul class="dis">
+<li>konya teknik üni</li>
+<li>tbmyo</li>
+<li>konya</li>
+</ul>
+<ul>
+    <li>konya teknik üni</li>
+    <li>tbmyo</li>
+    <li>konya</li>
+</ul>
+
+<img src="indir.png">
+<img class="bir" src="indir.png" height=100px>
+<img class="iki" src="indir.png" height=100px>
+<img class="üç" src="indir.png" height=100px>
+
+<div class="ana">
+<div class="başlık"></div>
+
+<div class="icerik"></div>
+
+<div class="hakkında"></div>
+
+</div>
+
+<div class="kontrol"></div>
+
+<div class="statik"></div>
+
+<div class="relative"></div>
+
+<div class="göreceli"></div>
+
+<div class="kontoll"></div>
+
+<div class="sabit"></div>
+
+<div class="kontolll"></div>
+
+<div class="mutlak"></div>
+
+<div class="konrollll"></div>
+
+<div class="yapışkan"></div>
+
+<div class="konrollll"></div>
+
+<div class="konrollll"></div>
+
+<div class="konrolllll"></div>
+
+<div class="ikinci"></div>
+
+<div class="ücüncü"></div>
+
+<h4 style="color: red;">h4 etiketi+satır içi bildirim</h4>
+
+<h4>h4+sayfa düzeyinde</h4>*/
+
+<p id="yazı1">bu bir paragraftır</p><!--bunu documentin altına yazsaydım olmazdı çünkü derleyici
+yukardan aşşa doğru gidiyor okumaya-->
+<script>
+    document.getElementById(yazı1).innerText="bu yazı javascript ile değiştirlmiştir"
+    var a;//undefined typeof(a) denirse bilinir
+    var b=50;//number   "    (b)      "     "
+    var c= 3.14;//number
+    var d = "merhaba dünya"//string
+    f= 80;//number
+    t= true;//boolean
+    r= false;//boolean
+    //  += kendisiyle bir değeri toplar/  -= çıkarır
+    // *= kendisiyle bir değeri çarpar
+    // %= kendsinin bir değere bölümünün kalanını bulur (mod)
+
+    // == birbirne eşitse
+    // != birbirine eşet değilse
+    // === değerleri ve türleri birbirnibe eşittir
+    // <-> küçükse-büyükse
+    // >= - <= büyükse veya eşitse - küçükse veya eşitse
+
+    // & ve
+    // || veya
+    // ! değil
+
+</script>
+    </body>
+</head>
+</html>
