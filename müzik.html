@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>müzik türü seçme uygulaması</title>
+    <script src="müzik.js"></script>
+</head>
+
+<body>
+<style>
+    #game-board {
+        position: relative;
+        height: 400px;
+        width: 400px;
+        border: 1px solid black;
+        background-image: url("müzik2.jpg");
+    }
+    </style>
+    <style>
+        body {
+            background-color: blue;
+            background-image: url("müzik2.jpg");
+            background-size: auto;
+            border-radius: 30%;
+        }
+
+        .expo {
+            text-align: center;
+            color: red;
+        }
+
+        .div1 {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: large;
+            color: aquamarine;
+            text-align: center;
+            width: 400px;
+            height: 330px;
+            padding: 20px;
+            background-color: yellow;
+            background-image: url("müzik.jpg");
+            position: absolute;
+            top: 45%;
+            left: 45%;
+            margin-left: -160px;
+            margin-right: -300px;
+            margin-top: -70px;
+            border: 20px solid beige;
+            border-radius: 35px 35px 35px 35px;
+        }
+
+        .hkamil {
+            text-align: center;
+            color: blue;
+            font-size: xx-large;
+            margin-left: 60px;
+            font-weight: bold;
+        }
+
+        .üst-butonlar {
+            height: 30px;
+            width: 100%;
+            background-color: rgb(167, 122, 59);
+            text-align: end;
+        }
+
+        .adülogo {
+            height: 30px;
+            width: 45px;
+        }
+
+        .buton1 {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: small;
+            color: rgb(255, 255, 255);
+            background-color: red;
+            text-align: center;
+            height: 70px;
+            width: 250px;
+            padding: 40px;
+            border-radius: 25px 25px 25px 25px;
+            margin-left: 70px;
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            margin-right: 70px;
+
+        }
+
+        .buton2 {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: small;
+            color: rgb(255, 255, 255);
+            background-color: red;
+            text-align: center;
+            height: 70px;
+            width: 250px;
+            padding: 40px;
+            border-radius: 25px 25px 25px 25px;
+            margin-left: 70px;
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+
+        }
+
+        .div2 {
+            padding: 20px;
+            top: 340px;
+            left: 334px;
+            right: 300px;
+            position: absolute;
+            text-align: center;
+            margin-right: 100px;
+            margin-left: 139px;
+           
+        }
+
+        .butonlar {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: small;
+            color: rgb(255, 255, 255);
+            background-color: black;
+            text-align: center;
+            height: 70px;
+            width: 70px;
+            border-radius: 50%;
+            border: 10px solid red;
+        }
+
+        .butonlar:hover {
+            -webkit-transition-duration: 0.30s;
+            border: 2px solid blue;
+        }
+
+        .buton1:hover {
+            -webkit-transition-duration: 0.30s;
+            border: 5px solid aqua;
+        }
+
+        .buton2:hover {
+            -webkit-transition-duration: 0.30s;
+            border: 5px solid black;
+        }
+
+        .pSon {
+            margin-right: 100px;
+            margin-left: 0px;
+            font-size: medium;
+            color: black;
+            background-size: auto;
+            font-weight: 600;
+            position: absolute;
+           left: 20px;
+            top: 400px;
+            
+        }
+    </style>
+    
+    
+
+    <!-- <div class="üst-butonlar">
+        <ul>
+           <a href="expert.html"><li><img class="adülogo" src="adülogo.jpg" alt="adü logo"></li></a>
+            <li><a href="expert.html">ANA SAYFA</a></li>
+        </ul>
+    </div>-->
+    <h class="hkamil">SEVDİĞİNİZ MÜZİK TÜRÜNÜ SEÇME UYGULMASINA HOŞGELDİNİZ!!</h>
+    <div id="container">
+        <h1 class="expo">HANGİ MÜZİK SİZİN İÇİNDİR</h1>
+        <div id="soruDiv1" class="div1">
+
+            <h2 id="soru01" class="SoruStyle">MÜZİK SEÇMEMDE BANA YARDIMCI OLUR MUSUN?</h2>
+        </div><!--soru kısım-->
+        <div id="butonKisim" class="div2">
+            <button onclick="soru01()" class="buton1">
+                Tabii ki:) Haydi gidelim.</button>
+            <button onclick="soru01()" class="buton2">teşekkür ederim,tercih etmiyorum :/</button>
+            <div id="alternatifDiv"></div><!--alternatifDiv-->
+        </div><!--buton kısım-->
+    </div><!--container div-->
+    <script>
+        var soru = document.getElementById("soruDiv1");
+        var alternatif = document.getElementById("butonKisim");
+        var soruu = document.getElementById("soruDiv1");
+        function soru01() {
+            soru.innerHTML = "HANGİ TÜR MÜZİKLERDEN HOŞLANIRSINIZ?";
+            
+            cevap01();
+            cevap02();
+        }
+
+        function cevap01() {
+            alternatif.innerHTML = '<button class="butonlar" onclick="----;">ROCK</button><button class="butonlar" onclick="----">POP</button><button class="butonlar" onclick="----">BLUES</button><button class="butonlar" onclick="---">RAP</button>';
+        }
+
+    function soru02(){
+        soruu.innerHTML="PEKİ HANGİ AKTİVİTEYİ YAPMAK İSTERSİNİZ??"
+    }
+    let oyun=1;
+    let bos=2;
+
+    function cevap02(){
+        alert('suan sayfamız gelişim aşamasında olduğu için isteğiniz gerçekleştirilemiyor, özür dileriz! . Ama bir oyun oynamak ister misiniz? :)) ');
+    }
+    prompt("lütfen evetse 1, hayırsa 2 ye basın ");
+    if(oyun){
+        alert("oyun oynama yeridir")
+    }else{
+        alert("bos seviye oynanabilir")
+    }
+
+
+
+
+    </script>
+    <p class="pSon">Edit Kamil Umut Araz<br>
+        By Mücahit Yeniyıl
+    </p>
+</body>
+
+</html>
